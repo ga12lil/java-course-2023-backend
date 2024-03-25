@@ -2,18 +2,19 @@ app:
   scheduler:
     enable: true
     interval: 10s
-    force-check-delay: 10s
+    force-check-delay: 60s
   api:
     git-hub-api-path: https://api.github.com
     stack-overflow-api-path: https://api.stackexchange.com
     bot-path: http://localhost:8090
+  database-access-type: jpa
 
 spring:
   application:
     name: scrapper
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/scrapper
+    url: jdbc:postgresql://localhost:5438/scrapper
     username: postgres
     password: postgres
   liquibase:
